@@ -4,20 +4,6 @@ import { fetchTopHeadlines } from '../../api/newsApi';
 import ArticleList from '../articlelist/ArticleList';
 import { ArticleCardProps } from '../articlecard/ArticleCard';
 
-interface NewsArticle {
-  source: {
-    id: string | null;
-    name: string;
-  };
-  author: string | null;
-  title: string;
-  description: string | null;
-  url: string;
-  urlToImage: string | null;
-  publishedAt: string;
-  content: string | null;
-}
-
 const NewsList: React.FC = () => {
   const [articles, setArticles] = useState<ArticleCardProps[]>([]);
   const [refreshing, setRefreshing] = useState<boolean>(false);
